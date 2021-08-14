@@ -17,7 +17,6 @@ const formatVersion = (version) => {
   const data = await response.json();
   const formatedData = data.data[0];
 
-  console.log(formatedData);
   status.innerHTML = getStatus(formatedData);
   getStatus(formatedData) == "on"
     ? (statusIcon.style.color = "#bc4749")
