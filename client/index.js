@@ -3,6 +3,9 @@ const statusIcon = document.querySelector(".status-icon");
 const players = document.querySelector(".players");
 const max = document.querySelector(".max");
 const version = document.querySelector(".version");
+const iframe = document.querySelector("iframe");
+const grow = document.querySelector(".grow");
+const nav = document.querySelector("nav");
 
 const getStatus = (data) => {
   return data.status == "on" ? "allumé" : "éteint";
@@ -26,3 +29,13 @@ const formatVersion = (version) => {
   max.innerHTML = formatedData.players.max;
   version.innerHTML = formatVersion(formatedData.version);
 })();
+
+grow.addEventListener("click", function () {
+  iframe.classList.replace("dynmap", "dynmap-expended");
+  nav.classList.remove("hide");
+});
+
+nav.addEventListener("click", function () {
+  iframe.classList.replace("dynmap-expended", "dynmap");
+  nav.classList.add("hide");
+});

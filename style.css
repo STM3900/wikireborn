@@ -106,7 +106,50 @@ ol li::before {
 }
 
 .thanks {
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.dynmap {
+  height: 500px;
+  width: 100%;
+  margin-bottom: 50px;
+  transition: 0.3;
+}
+
+.dynmap-expended {
+  position: absolute;
+  width: 99.7vw;
+  height: 99.5vh;
+  margin-left: -20%;
+  top: 0;
+  transition: 0.3;
+}
+
+.grow {
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+.grow:hover {
+  cursor: pointer;
+}
+
+nav {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  font-size: 20px;
+  z-index: 999999;
+  color: white;
+}
+
+nav:hover {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
 }
 
 @keyframes fadeIn {
@@ -151,6 +194,10 @@ ol li::before {
   article section {
     padding: 2px 15px;
   }
+
+  .dynmap-expended {
+    margin-left: -5%;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -161,5 +208,9 @@ ol li::before {
 
   header aside {
     width: 96%;
+  }
+
+  .dynmap-expended {
+    margin-left: -2%;
   }
 }
