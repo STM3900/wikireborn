@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 25px;
+}
+
+header {
+  min-height: 250px;
+  height: 30vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+header aside {
+  position: absolute;
+  min-height: 250px;
+  height: 30vh;
+
+  background-image: url("medias/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+  z-index: -1;
+  border-radius: 5px;
+  filter: brightness(0.45);
+}
+
+header h1 {
+  color: white;
+  font-size: 60px;
+  font-weight: normal;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: center;
+
+  gap: 15px 32px;
+}
+
+article section {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+article section p {
+  animation: fadeIn 0.7s;
+}
+
+article section:nth-child(1) {
+  min-width: 130px;
+}
+
+.status-icon {
+  margin-left: 6px;
+  font-size: 12px;
+  transform: translateY(-5px);
+}
+
+article section:nth-child(2) {
+  min-width: 110px;
+}
+
+article section:nth-child(3) {
+  min-width: 263px;
+}
+
+article section:nth-child(4) {
+  min-width: 115px;
+}
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  margin: 0;
+  padding: 0;
+}
+
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 0.5rem;
+  font-family: "Abril Fatface", serif;
+  line-height: 0.1;
+}
+
+.thanks {
+  margin-top: 50px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* responsive */
+/*
+@media screen and (max-width: px) {
+
+  }
+*/
+@media screen and (max-width: 1024px) {
+  header {
+    height: 25vh;
+  }
+
+  header aside {
+    height: 25vh;
+  }
+
+  header h1 {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  header aside {
+    width: 90%;
+  }
+
+  article section {
+    padding: 2px 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  header aside {
+    width: 96%;
+  }
+}
